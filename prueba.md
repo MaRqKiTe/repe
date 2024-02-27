@@ -1,0 +1,21 @@
+# Titulo 1
+
+## Titulo 2
+
+**negritas**
+
+*cursiva*
+
+***negrita y cursiva***
+
+
+
+- elemento 1
+- elemento 2
+- elemento 3
+
+~~~
+ahhh siiiiiii
+
+<!DOCTYPE>
+~~~
