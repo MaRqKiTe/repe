@@ -3,14 +3,18 @@ import re
 # Definir una lista de tokens y sus expresiones regulares correspondientes
 
 tokens = [
-    ('numeros', r'\d+'),  # Coincide con uno o más dígitos
-    ('letras', r'[a-zA-Z]'),  # Coincide con cualquier letra individual (mayúscula o minúscula)
-    ('minuscula', r'[a-z]'),  # Coincide con cualquier letra minúscula individual
-    ('mayuscula', r'[A-Z]'),  # Coincide con cualquier letra mayúscula individual
-    ('especiales', r'[!&\_|@#$^~]'),  # Coincide con cualquier carácter especial del conjunto especificado
-    ('operadores', r'[=,-,*,/,=,<,>]'),  # Coincide con cualquier operador aritmético
-]
-
+# Coincide con uno o más dígitos
+    ('numeros', r'\d+'), 
+ # Coincide con cualquier letra individual (mayúscula o minúscula)
+    ('letras', r'[a-zA-Z]'), 
+# Coincide con cualquier letra minúscula individual
+    ('minuscula', r'[a-z]'),  
+# Coincide con cualquier letra mayúscula individual
+    ('mayuscula', r'[A-Z]'),  
+# Coincide con cualquier carácter especial del conjunto especificado
+    ('especiales', r'[!&\_|@#$^~]'),  
+# Coincide con cualquier operador aritmético
+    ('operadores', r'[=,-,*,/,=,<,>]'),  
 
 def lexer(expression):
 # Combinar todos los patrones de expresiones regulares de tokens en una sola alternancia
@@ -64,16 +68,19 @@ def is_strong_password(password):
             has_lowercase and has_uppercase and
             has_digit and has_special)
 
-
+# Imprimir tokens para demostración
 expression = "Ma1e8o* r3A/1@"
 for token in lexer(expression):
-    print(token)  # Imprimir tokens para demostración
+    print(token)  
 
   #ingresa la contrasena para verificar que cumpla con los requisitos 
+  
 password = input("Pon tu contrasena: ")
 if is_strong_password(password):
     print("Tu contrasena es segura!")
-else: #sigerencias para la contrasena 
+else:
+ #sigerencias para la contrasena 
+ 
     print("Tu contraseña es débil. Aquí hay algunas sugerencias de mejora:")
     print("- Utilice un mínimo de 12 caracteres.")
     print("- Incluya letras minúsculas, letras mayúsculas, números y caracteres especiales.")
